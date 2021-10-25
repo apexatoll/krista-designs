@@ -10,19 +10,10 @@
     <title><%= yield(:title) %> | Krista Designs</title>
   </head>
   <body>
-    <nav>
-      <div>Krista Designs</div>
-      <ul>
-        <li><%= link_to "home", root_path %></li>
-        <li>projects</li>
-        <li><%= link_to "about", about_path %></li>
-        <li><%= link_to "contact", contact_path %></li>
-      </ul>
-    </nav>
-    <%= yield %>
-    <footer>
-      <div>Krista Designs</div>
-      <div>Copyright 2021</div>
-    </footer>
+    <%= render "layouts/header" %>
+    <div class="article container">
+      <%= yield %>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
