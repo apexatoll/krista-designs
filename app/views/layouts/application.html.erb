@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Krista</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= yield(:title) %> | Krista Designs</title>
   </head>
-
   <body>
+    <nav>
+      <div>Krista Designs</div>
+      <ul>
+        <li><%= link_to "home", root_path %></li>
+        <li>projects</li>
+        <li><%= link_to "about", about_path %></li>
+        <li><%= link_to "contact", contact_path %></li>
+      </ul>
+    </nav>
     <%= yield %>
+    <footer>
+      <div>Krista Designs</div>
+      <div>Copyright 2021</div>
+    </footer>
   </body>
 </html>
